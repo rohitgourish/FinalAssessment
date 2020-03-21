@@ -1,0 +1,10 @@
+.position{
+    float: right;
+    margin-right: 5px;
+}
+
+form{
+    margin-top: 10px;
+    border-style: groove;
+    padding: 10px;
+}

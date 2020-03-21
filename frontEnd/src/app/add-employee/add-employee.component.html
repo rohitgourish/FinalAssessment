@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>ADD CUSTOMER</h4>
+            <form>
+                <div class="form-group">
+                    <label>FIRST NAME</label>
+                    <input type = "text" class="form-control" placeholder="Enter First Name" [(ngModel)]="empData.firstname" name="firstname">
+                </div>
+
+                <div class="form-group">
+                    <label>LAST NAME</label>
+                    <input type = "text" class="form-control" placeholder="Enter Last Name" [(ngModel)]="empData.lastname" name="lastname">
+                </div>
+
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type = "email" class="form-control" placeholder="Enter Email" [(ngModel)]="empData.email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label>ADDRESS</label>
+                    <input type = "text" class="form-control" placeholder="Enter Address" [(ngModel)]="empData.address" name="address">
+                </div>
+
+                <div class="form-group">
+                    <label>ENTER CUSTOMER ID PROOF</label>
+                    <input type = "text" class="form-control" placeholder="Enter ID" [(ngModel)]="empData.id" name="id">
+                </div>
+
+                <div class="form-group">
+                    <label>CITY</label>
+                    <input type = "text" class="form-control" placeholder="Enter City" [(ngModel)]="empData.city" name="city">
+                </div>
+
+                <div class="form-group">
+                    <label>STATE</label>
+                    <select class="custom-select" name="state" [(ngModel)]="empData.state">
+                        <option *ngFor="let state of states">{{state}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>GENDER</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" [(ngModel)]="empData.gender" value="Male" name = "gender">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name = "gender" [(ngModel)]="empData.gender" vale="female" value="Female">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" (click)="addEmployee()">ADD/SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>EDIT CUSTOMER</h4>
+            <form>
+                <div class="form-group">
+                    <label>EDIT FIRST NAME</label>
+                    <input type = "text" class="form-control" placeholder="Edit First Name" [(ngModel)]="empData.firstname" name="firstname">
+                </div>
+
+                <div class="form-group">
+                    <label>EDIT LAST NAME</label>
+                    <input type = "text" class="form-control" placeholder="Edit Last Name" [(ngModel)]="empData.lastname" name="lastname">
+                </div>
+
+                <div class="form-group">
+                    <label>EDIT EMAIL</label>
+                    <input type = "email" class="form-control" placeholder="Edit Email" [(ngModel)]="empData.email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label>EDIT ADDRESS</label>
+                    <input type = "text" class="form-control" placeholder="Edit Address" [(ngModel)]="empData.address" name="address">
+                </div>
+
+                <div class="form-group">
+                    <label>EDIT CITY</label>
+                    <input type = "text" class="form-control" placeholder="Edit City" [(ngModel)]="empData.city" name="city">
+                </div>
+
+                <div class="form-group">
+                    <label>EDIT STATE</label>
+                    <select class="custom-select" name="state" [(ngModel)]="empData.state">
+                        <option *ngFor="let state of states">{{state}}</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-danger" (click)="delete(empData.id)">DELETE</button>
+                <button class="btn btn-light position" (click)="cancel()">CANCEL</button>
+                <button class="btn btn-secondary position" (click)="update()">UPDATE</button>
+            </form>
+        </div>
+    </div>
+</div>
